@@ -1,7 +1,89 @@
+html,
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+main {
+  padding: 1rem;
+}
+
+main {
+  flex: 1;
 }
 
 .hero {
-    text-align: center;
+  text-align: center;
+}
+
+/*daqui até o fim: footer*/
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  background-color: #0f0f0f;
+}
+
+.footer-conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contato-instagram,
+.contato-whatsapp,
+.contato-email {
+  display: flex;
+  align-items: center;
+}
+
+.contato-instagram span,
+.contato-whatsapp span,
+.contato-email span {
+  color: white;
+}
+
+.link-instagram,
+.link-whatsapp,
+.link-email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: white;
+  width: fit-content;
+}
+
+.icone-instagram {
+  font-size: 3rem;
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.icone-whatsapp {
+  font-size: 3rem;
+  color: #25d366;
+}
+
+.icone-email {
+  font-size: 3rem;
+  color: #ffffff;
 }

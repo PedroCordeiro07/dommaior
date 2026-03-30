@@ -1,75 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dom Maior</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <!--TO DO: aplicar a fonte escolhida pelo design-->
-            <h1 id="mainTitle">Dom Maior</h1>
-            <div class="hero">
-                <!--TO DO: Adicionar a foto na pasta e ajustar a extensão do arquivo-->
-                <img src="images/joaodias.jpg" alt="Professor João Dias">
-                <h2>João Dias</h2>
-            </div>
-        </header>
-        <section>
-            <h2>Sobre</h2>
-                <p>
-                    Professor OMB com experiência no ensino de música para alunos de diferentes níveis.
-                    Aulas focadas na prática, técnica e desenvolvimento musical de forma clara e objetiva.
-                </p>
-            <ul>
-                <!--TO DO: identificar o registro da OMB do professor-->
-                <li>🎓 Formação reconhecida pela OMB: </li>
-                <li>🎼 Ensino de teoria musical aplicada</li>
-                <li>🎸 Experiência com múltiplos instrumentos</li>
-            </ul>
-        </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Maior</title>
 
-        <section id="audience">
-            <h2>Indicado Para</h2>
-                <p>
-                    Alunos iniciantes e intermediários que buscam aprender música de forma prática,
-                    seja começando do zero ou já possuindo experiência no assunto.
-                </p>
-        </section>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!--import dos ícones do bootstrap-->
 
-        <section class="gallery">
-            <p>Aprenda no seu ritmo, com foco no que você realmente quer tocar.</p>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-            <p class="instruction">Selecione uma imagem para visualizar uma demonstração da aula</p>
+  <body>
+    <header>
+      <!--TO DO: aplicar a fonte escolhida pelo design-->
+      <h1 id="mainTitle">Dom Maior</h1>
 
-            <!--TO DO: definir se os vídeos serão locais ou youtube e adicionar os links-->
-            <a href="#" target="_blank">
-                <img src="images/teoriamusical" alt="Teoria Musical">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/Canto" alt="Canto">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/violao" alt="Violão">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/violino" alt="Violino">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/teclado" alt="Teclado">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/guitarra" alt="Guitarra">
-            </a>
-        </section>
+      <div class="hero">
+        <!--TO DO: Adicionar a foto na pasta e ajustar a extensão do arquivo-->
+        <img src="images/joaodias.jpg" alt="Professor João Dias" />
+        <h2>João Dias</h2>
+      </div>
+    </header>
 
-        <section>
-            <!--Insight: Depoimento de alunos com video ou texto-->
-        </section>
+    <main>
+      <section>
+        <h2>Sobre</h2>
+        <p>
+          Professor OMB com experiência no ensino de música para alunos de
+          diferentes níveis. Aulas focadas na prática, técnica e desenvolvimento
+          musical de forma clara e objetiva.
+        </p>
 
-        <footer>
-            <!--TO DO: Links para instagram e whatsapp-->
-        </footer>
-    </body>
+        <ul>
+          <!--TO DO: identificar o registro da OMB do professor-->
+          <li>🎓 Formação reconhecida pela OMB:</li>
+          <li>🎼 Ensino de teoria musical aplicada</li>
+          <li>🎸 Experiência com múltiplos instrumentos</li>
+        </ul>
+      </section>
+
+      <section id="audience">
+        <h2>Indicado Para</h2>
+        <p>
+          Alunos iniciantes e intermediários que buscam aprender música de forma
+          prática, seja começando do zero ou já possuindo experiência no
+          assunto.
+        </p>
+      </section>
+
+      <section class="gallery">
+        <p>Aprenda no seu ritmo, com foco no que você realmente quer tocar.</p>
+
+        <p class="instruction">
+          Selecione uma imagem para visualizar uma demonstração da aula
+        </p>
+
+        <!--TO DO: definir se os vídeos serão locais ou youtube e adicionar os links-->
+        <a href="#" target="_blank">
+          <img src="images/teoriamusical.jpg" alt="Teoria Musical" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="images/canto.jpg" alt="Canto" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="images/violao.jpg" alt="Violão" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="images/violino.jpg" alt="Violino" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="images/teclado.jpg" alt="Teclado" />
+        </a>
+        <a href="#" target="_blank">
+          <img src="images/guitarra.jpg" alt="Guitarra" />
+        </a>
+      </section>
+
+      <section>
+        <!--Insight: Depoimento de alunos com video ou texto-->
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-conteudo">
+        <div class="contato-instagram">
+          <a
+            href="https://www.instagram.com/joaobdiass/?utm_source=ig_web_button_share_sheet"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-instagram"
+          >
+            <span>Instagram: @joaobdiass</span>
+            <i class="bi bi-instagram icone-instagram"></i>
+            <!--ícone instagram do bootstrap-->
+          </a>
+        </div>
+
+        <div class="contato-whatsapp">
+          <a
+            href="https://wa.me/5511992944812"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-whatsapp"
+          >
+            <!--esse atributo no "rel" dos links de Whatsapp e Instagram são padrões de segurança, pra que 
+          a página que o usário for direcionado, não conseguir ter acesso a nenhum dado da página anterior
+          de onde ele acessou o link, na parte do email não precisa-->
+            <span>WhatsApp: (11) 99294-4812</span>
+            <i class="bi bi-whatsapp icone-whatsapp"></i>
+            <!--ícone whatsapp do bootstrap-->
+          </a>
+        </div>
+
+        <div class="contato-email">
+          <a href="mailto:jbdrosi@gmail.com" class="link-email">
+            <span>Email: jbdrosi@gmail.com</span>
+            <i class="bi bi-envelope-at-fill icone-email"></i>
+
+            <!--ícone email do bootstrap-->
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
