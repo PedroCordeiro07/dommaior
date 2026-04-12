@@ -5,10 +5,42 @@ body {
 }
 
 body {
+  background-color: #2d2d2d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background: linear-gradient(180deg, #2d2d2d 10%, #0f0f0f 100%);
+}
+
+.decoration img {
+  position: fixed;
+  width: 80px;
+  opacity: 0.25;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.canto-superior-esquerdo {
+  top: 5rem;
+  left: 2rem;
+}
+
+.canto-superior-direito {
+  top: 5rem;
+  right: 2rem;
+}
+
+.canto-inferior-esquerdo {
+  bottom: 7rem;
+  left: 2rem;
+}
+
+.canto-inferior-direito {
+  bottom: 7rem;
+  right: 2rem;
 }
 
 header,
