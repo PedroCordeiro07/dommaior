@@ -61,6 +61,8 @@ footer {
   margin-top: 3rem;
   padding: 1.5rem 1rem;
   background-color: #0f0f0f;
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
 }
 
 .footer-conteudo {
