@@ -11,7 +11,13 @@ body {
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  background: linear-gradient(180deg, #2d2d2d 10%, #0f0f0f 100%);
+  background: linear-gradient(
+    135deg,
+    #050505 0%,
+    #181818 35%,
+    #0e0e0e 65%,
+    #030303 100%
+  );
 }
 
 .decoration img {
