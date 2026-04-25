@@ -114,6 +114,23 @@ h2 {
 
 }
 
+@media (max-width: 768px) {
+  .block {
+    display: flex;
+    align-items: center;
+    margin-top: 7rem;
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .block.reverse {
+    flex-direction: row-reverse;
+    margin-top: 7rem;
+    margin-right: 10%;
+  }
+}
+
 
 .about-text-block {
   padding-left: 10%;
@@ -129,26 +146,45 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    .about-text-block {
-      padding-left: 10%;
-      text-align: left;
-      width: 80%;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-text-blockReverse {
-      padding-right: 10%;
-      text-align: left;
-      width: 80%;
-    }
+  .about-text-block,
+  .about-text-blockReverse {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: left;
+  }
 }
 
 
-.about-image {
+.about-image-block {
   width: 60%;
   box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
   border-radius: 20px;
+  margin-right: 10%;
+}
+
+.about-image-blockReverse {
+  width: 60%;
+  box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
+  border-radius: 20px;
+  margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+  .about-image-block {
+    width: 70%;
+    box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
+    border-radius: 20px;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image-blockReverse {
+    width: 70%;
+    box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
+    border-radius: 20px;
+    margin-left: 10%;
+  }
 }
 
 .gallery {
