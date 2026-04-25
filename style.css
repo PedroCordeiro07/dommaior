@@ -34,7 +34,7 @@ body {
   .decoration img {
     position: fixed;
     width: 50px;
-    opacity: 0.1;
+    opacity: 0.2;
     filter: brightness(0) invert(1);
     pointer-events: none;
     z-index: 1;
@@ -82,7 +82,9 @@ main {
 }
 
 @media (max-width: 768px) {
-  .hero-picture { width: 50%; }
+  .hero-picture { 
+    width: 50%; 
+  }
 }
 
 
@@ -97,8 +99,15 @@ main {
 
 }
 
+@media (max-width: 768px) {
+  .hero-description {
+    width: 75%;
+  }
+}
 
 h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
   font-size: 2rem;
   letter-spacing: 0.5px;
   margin-bottom: 5px;
@@ -106,6 +115,7 @@ h2 {
 }
 
 .about-subtitle {
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   opacity: 0.6;
   letter-spacing: 0.5px;
@@ -116,13 +126,12 @@ h2 {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-top: 7rem;
+  margin-bottom: 3rem;
 }
 
 .block.reverse {
   flex-direction: row-reverse;
-  margin-top: 7rem;
-
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -130,7 +139,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7rem;
   }
 }
 
@@ -138,63 +146,69 @@ h2 {
   .block.reverse {
     flex-direction: row-reverse;
     flex-direction: column;
-    margin-top: 7rem;
   }
 }
 
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
 
 .about-text-block {
-  padding-left: 10%;
+  padding-left: 15%;
   text-align: left;
   width: 30%;
+  font-family: 'Poppins', serif;
 }
 
 .about-text-blockReverse {
-  padding-right: 10%;
+  padding-right: 13%;
   text-align: left;
   width: 30%;
-
+  font-family: 'Poppins', serif;
 }
 
 @media (max-width: 768px) {
   .about-text-block,
   .about-text-blockReverse {
-    width: 100%;
+    width: 75%;
     padding: 0 1.5rem;
     text-align: left;
+    font-family: 'Lora', serif;
   }
 }
 
 
 .about-image-block {
-  width: 60%;
+  width: 50%;
   box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
   border-radius: 20px;
-  margin-right: 10%;
 }
 
 .about-image-blockReverse {
-  width: 60%;
+  width: 50%;
   box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
   border-radius: 20px;
-  margin-left: 10%;
 }
 
 @media (max-width: 768px) {
   .about-image-block {
-    width: 80%;
+    width: 70%;
     box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
     border-radius: 20px;
-    
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .about-image-blockReverse {
-    width: 80%;
+    width: 70%;
     box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
     border-radius: 20px;
-    
+    margin-bottom: 1rem;
   }
 }
 
