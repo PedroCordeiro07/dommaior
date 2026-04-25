@@ -131,15 +131,14 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin-top: 7rem;
-    margin-left: 10%;
   }
 }
 
 @media (max-width: 768px) {
   .block.reverse {
     flex-direction: row-reverse;
+    flex-direction: column;
     margin-top: 7rem;
-    margin-right: 10%;
   }
 }
 
@@ -183,19 +182,19 @@ h2 {
 
 @media (max-width: 768px) {
   .about-image-block {
-    width: 100%;
+    width: 80%;
     box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
     border-radius: 20px;
-    margin-right: 10%;
+    
   }
 }
 
 @media (max-width: 768px) {
   .about-image-blockReverse {
-    width: 100%;
+    width: 80%;
     box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
     border-radius: 20px;
-    margin-left: 10%;
+    
   }
 }
 
