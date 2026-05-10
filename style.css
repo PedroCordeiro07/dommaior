@@ -214,7 +214,13 @@ h3 {
 }
 
 .gallery {
-  margin-top: 3rem;
+  padding-top: 5rem;
+}
+
+.gallery-subtitle {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 5rem;
 }
 
 
