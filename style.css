@@ -78,7 +78,7 @@ main {
   margin-top: 3rem;
   width: 30%;
   border-radius: 100%;
-  box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 768px) {
@@ -95,8 +95,7 @@ main {
   padding: 10px 20px;
   background-color: #1f1f1f;
   border-radius: 1rem;
-  box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
-
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 768px) {
@@ -185,20 +184,20 @@ h3 {
 
 .about-image-block {
   width: 50%;
-  box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   border-radius: 20px;
 }
 
 .about-image-blockReverse {
   width: 50%;
-  box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   border-radius: 20px;
 }
 
 @media (max-width: 768px) {
   .about-image-block {
     width: 70%;
-    box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
     border-radius: 20px;
     margin-bottom: 1rem;
   }
@@ -207,7 +206,7 @@ h3 {
 @media (max-width: 768px) {
   .about-image-blockReverse {
     width: 70%;
-    box-shadow: 0px 0px 69px 22px rgba(255, 255, 255, 0.29);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
     border-radius: 20px;
     margin-bottom: 1rem;
   }
