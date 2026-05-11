@@ -22,8 +22,17 @@ body {
 }
 
 .logo {
+    margin-top: 30px;
     width: 15%;
 }
+
+@media (max-width: 768px) {
+  .logo { 
+    margin-top: 50px;
+    width: 30%;
+  }
+}
+
 
 .video-section {
     min-height: 50vh;
