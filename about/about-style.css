@@ -21,6 +21,16 @@ body {
   );
 }
 
+.logo {
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 40%;
+  }
+}
+
 .decoration img {
   position: fixed;
   width: 80px;
