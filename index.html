@@ -1,75 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dom Maior</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <!--TO DO: aplicar a fonte escolhida pelo design-->
-            <h1 id="mainTitle">Dom Maior</h1>
-            <div class="hero">
-                <!--TO DO: Adicionar a foto na pasta e ajustar a extensão do arquivo-->
-                <img src="images/joaodias.jpg" alt="Professor João Dias">
-                <h2>João Dias</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do'm Maior</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!--import dos ícones do bootstrap-->
+
+    <!--import da fonte utilizada em about text-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--import do CSS bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!--import do JS bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    
+    <div class="decoration">
+      <img
+        class="canto-superior-esquerdo"
+        src="./images/notaClavedeSol.svg"
+        alt=""
+      />
+      <img
+        class="canto-superior-direito"
+        src="./images/notaDuasColcheias.svg"
+        alt=""
+      />
+      <img
+        class="canto-inferior-esquerdo"
+        src="./images/notaPausadeFusa.svg"
+        alt=""
+      />
+      <img
+        class="canto-inferior-direito"
+        src="./images/notaSemicolcheia.svg"
+        alt=""
+      />
+    </div>
+
+    <header class="navbar">
+      <nav class="navbar navbar-expand-lg" id="second-navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="./index.html">
+              <img class="logo" src="./images/dommaior-logo.png"/>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-button" href="./about/index.html">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-button" href="./contato/index.html">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </header>
-        <section>
-            <h2>Sobre</h2>
-                <p>
-                    Professor OMB com experiência no ensino de música para alunos de diferentes níveis.
-                    Aulas focadas na prática, técnica e desenvolvimento musical de forma clara e objetiva.
-                </p>
-            <ul>
-                <!--TO DO: identificar o registro da OMB do professor-->
-                <li>🎓 Formação reconhecida pela OMB: </li>
-                <li>🎼 Ensino de teoria musical aplicada</li>
-                <li>🎸 Experiência com múltiplos instrumentos</li>
-            </ul>
-        </section>
+        </div>
+      </nav>
+    </header>
+    
+    <div class="hero">
+      <img
+        class="hero-picture"
+        src="images/joaodias.jpeg"
+        alt="Professor João Dias"
+      />
 
-        <section id="audience">
-            <h2>Indicado Para</h2>
-                <p>
-                    Alunos iniciantes e intermediários que buscam aprender música de forma prática,
-                    seja começando do zero ou já possuindo experiência no assunto.
-                </p>
-        </section>
+      <div class="hero-description">
+        <span>João Dias</span>
+        <br/>
+        <span>12 anos de experiência | </span>
+        <span>OMB 72524 | </span>
+        <span>São Paulo | </span>
+        <span>Aulas presenciais, Online e a Domicílio | </span>
+        <span>Eventos: Casamentos, Debutantes, Culturais e Esportivos</span>
+      </div>
+    </div>
 
-        <section class="gallery">
-            <p>Aprenda no seu ritmo, com foco no que você realmente quer tocar.</p>
+    <section class="carousel-container">
+      <div>
+        <h1>Momentos Musicais</h1>
+        <p class="carousel-subtitle">"Expressando a Alma em Cada Nota"</p>
+      </div>
 
-            <p class="instruction">Selecione uma imagem para visualizar uma demonstração da aula</p>
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
 
-            <!--TO DO: definir se os vídeos serão locais ou youtube e adicionar os links-->
-            <a href="#" target="_blank">
-                <img src="images/teoriamusical" alt="Teoria Musical">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/Canto" alt="Canto">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/violao" alt="Violão">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/violino" alt="Violino">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/teclado" alt="Teclado">
-            </a>
-            <a href="#" target="_blank">
-                <img src="images/guitarra" alt="Guitarra">
-            </a>
-        </section>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        </div>
 
-        <section>
-            <!--Insight: Depoimento de alunos com video ou texto-->
-        </section>
+        <div class="carousel-inner">
 
-        <footer>
-            <!--TO DO: Links para instagram e whatsapp-->
-        </footer>
-    </body>
+          <!--VIDEO CAVACO-VIOLINO-->
+          <div class="carousel-item active">
+            <a href="./cavaco-violino/index.html">
+              <img class="carousel-image" src="./images/cavaco-violino.png" class="d-block w-100" alt="...">
+            </a>
+            <div class="carousel-caption">
+              <h5>Cordas em Harmonia</h5>
+              <p>Uma apresentação marcada pela leveza e pela emoção.</p>
+            </div>
+          </div>
+
+          <!--VIDEO GUITARRA-VIOLINO-->
+          <div class="carousel-item">
+            <a href="./guitarra-violino/index.html">
+              <img class="carousel-image" src="./images/guitarra-violino.png" class="d-block w-100" alt="...">
+            </a>
+            <div class="carousel-caption">
+              <h5>Energia Sinfônica</h5>
+              <p>A intensidade unida à elegância instrumental.</p>
+            </div>
+          </div>
+
+          <!--VIDEO VIOLAO-CANTO-->
+          <div class="carousel-item">
+            <a href="./violao-canto/index.html">
+              <img class="carousel-image" src="./images/violao-canto.png" class="d-block w-100" alt="...">
+            </a>
+            <div class="carousel-caption">
+              <h5>Canções de Fé</h5>
+              <p>Uma interpretação suave guiada pela emoção e espiritualidade.</p>
+            </div>
+          </div>
+
+          <!--VIDEO PIANO-->
+          <div class="carousel-item">
+            <a href="./piano/index.html">
+              <img class="carousel-image" src="./images/piano.png" class="d-block w-100" alt="...">
+            </a>
+            <div class="carousel-caption">
+              <h5>Elegância ao Piano</h5>
+              <p>Notas que transformam sentimentos em melodia.</p>
+            </div>
+          </div>
+
+          <!--VIDEO VIOLINO-IGREJA-->
+          <div class="carousel-item">
+            <a href="./violino-igreja/index.html">
+              <img class="carousel-image" src="./images/violino-igreja.png" class="d-block w-100" alt="...">
+            </a>
+            <div class="carousel-caption">
+              <h5>Melodias que Tocam a Alma</h5>
+              <p>Uma apresentação marcada pela paz e contemplação.</p>
+            </div>
+          </div>
+
+          <!--VIDEO VIOLINO-CASAMENTO-->
+          <div class="carousel-item">
+            <a href="./violino-casamento/index.html">
+              <img class="carousel-image" src="./images/violino-casamento.png" class="d-block w-100" alt="...">
+            </a>
+            <div class="carousel-caption">
+              <h5>Momentos Inesquecíveis</h5>
+              <p>A delicadeza do violino celebrando histórias de amor.</p>
+            </div>
+          </div>
+
+          <!--VIDEO VIOLINO-VIOLAO-->
+          <div class="carousel-item">
+            <a href="./violino-violao/index.html">
+              <img class="carousel-image" src="./images/violino-violao.png" class="d-block w-100" alt="...">
+            </a>
+            <div class="carousel-caption">
+              <h5>Interpretação Instrumental</h5>
+              <p>A união entre técnica, emoção e musicalidade.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+
+
+    <footer>
+      <div class="footer-conteudo">
+        <div class="contato-instagram">
+          <a
+            href="https://www.instagram.com/joaobdiass/?utm_source=ig_web_button_share_sheet"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-instagram"
+          >
+            <span>Instagram: @joaobdiass</span>
+            <i class="bi bi-instagram icone-instagram"></i>
+            <!--ícone instagram do bootstrap-->
+          </a>
+        </div>
+
+        <div class="contato-whatsapp">
+          <a
+            href="https://wa.me/5511992944812"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-whatsapp"
+          >
+            <!--esse atributo no "rel" dos links de Whatsapp e Instagram são padrões de segurança, pra que 
+          a página que o usário for direcionado, não conseguir ter acesso a nenhum dado da página anterior
+          de onde ele acessou o link, na parte do email não precisa-->
+            <span>WhatsApp: (11) 99294-4812</span>
+            <i class="bi bi-whatsapp icone-whatsapp"></i>
+            <!--ícone whatsapp do bootstrap-->
+          </a>
+        </div>
+
+        <div class="contato-email">
+          <a href="mailto:jbdrosi@gmail.com" class="link-email">
+            <span>Email: jbdrosi@gmail.com</span>
+            <i class="bi bi-envelope-at-fill icone-email"></i>
+
+            <!--ícone email do bootstrap-->
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
