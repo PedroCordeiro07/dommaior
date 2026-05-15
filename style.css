@@ -85,6 +85,7 @@ main {
   justify-content: center; 
   gap: 30px;
   padding: 20px;
+  margin-top: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -180,12 +181,61 @@ main {
 
 
 .carousel-container {
-  padding-top: 50px;
-  width: 90%;
-  max-width: 1300px;
+  width: 85%;
+  max-width: 900px;
   margin: 0 auto;
 }
 
+
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+
+    .carousel-item img {
+        height: 320px;
+    }
+
+}
+
+.carousel-caption h5 {
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption h5 {
+      font-size: 1rem;
+      font-family: 'Playfair Display', serif;
+  }
+
+  .carousel-caption p {
+      font-size: 0.78rem;
+  }
+}
+
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  margin-top: 3rem;
+}
+
+.carousel-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+  margin-bottom: 5rem;
+}
 
 
 
