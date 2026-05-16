@@ -36,7 +36,6 @@
   </head>
 
   <body>
-    
     <div class="decoration">
       <img
         class="canto-superior-esquerdo"
@@ -60,45 +59,46 @@
       />
     </div>
 
-    <header class="navbar">
+    <header>
       <nav class="navbar navbar-expand-lg" id="second-navbar">
-        <div class="container-fluid">
+        <div class="container-fluid justify-content-between">
+          <a class="navbar-brand" href="./index.html">
+            <img class="logo" src="./images/dommaior-logo.png" />
+          </a>
 
-            <a class="navbar-brand" href="./index.html">
-              <img class="logo" src="./images/dommaior-logo.png"/>
-            </a>
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link nav-button" href="#"> Serviços </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-button" href="./about/index.html">
+                  Sobre
+                </a>
+              </li>
 
-            <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="./about/index.html">
-                            Sobre
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link nav-button" href="./contato/index.html">
-                            Contato
-                        </a>
-                    </li>
-                </ul>
-            </div>
+              <li class="nav-item">
+                <a class="nav-link nav-button" href="./contato/index.html">
+                  Contato
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
-    
+
     <div class="hero">
       <img
         class="hero-picture"
@@ -108,7 +108,7 @@
 
       <div class="hero-description">
         <span>João Dias</span>
-        <br/>
+        <br />
         <span>12 anos de experiência | </span>
         <span>OMB 72524 | </span>
         <span>São Paulo | </span>
@@ -123,24 +123,68 @@
         <p class="carousel-subtitle">"Expressando a Alma em Cada Nota"</p>
       </div>
 
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="6"
+            aria-label="Slide 7"
+          ></button>
         </div>
 
         <div class="carousel-inner">
-
           <!--VIDEO CAVACO-VIOLINO-->
           <div class="carousel-item active">
             <a href="./cavaco-violino/index.html">
-              <img class="carousel-image" src="./images/cavaco-violino.png" class="d-block w-100" alt="...">
+              <img
+                class="carousel-image"
+                src="./images/cavaco-violino.png"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
             <div class="carousel-caption">
               <h5>Cordas em Harmonia</h5>
@@ -151,7 +195,12 @@
           <!--VIDEO GUITARRA-VIOLINO-->
           <div class="carousel-item">
             <a href="./guitarra-violino/index.html">
-              <img class="carousel-image" src="./images/guitarra-violino.png" class="d-block w-100" alt="...">
+              <img
+                class="carousel-image"
+                src="./images/guitarra-violino.png"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
             <div class="carousel-caption">
               <h5>Energia Sinfônica</h5>
@@ -162,18 +211,30 @@
           <!--VIDEO VIOLAO-CANTO-->
           <div class="carousel-item">
             <a href="./violao-canto/index.html">
-              <img class="carousel-image" src="./images/violao-canto.png" class="d-block w-100" alt="...">
+              <img
+                class="carousel-image"
+                src="./images/violao-canto.png"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
             <div class="carousel-caption">
               <h5>Canções de Fé</h5>
-              <p>Uma interpretação suave guiada pela emoção e espiritualidade.</p>
+              <p>
+                Uma interpretação suave guiada pela emoção e espiritualidade.
+              </p>
             </div>
           </div>
 
           <!--VIDEO PIANO-->
           <div class="carousel-item">
             <a href="./piano/index.html">
-              <img class="carousel-image" src="./images/piano.png" class="d-block w-100" alt="...">
+              <img
+                class="carousel-image"
+                src="./images/piano.png"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
             <div class="carousel-caption">
               <h5>Elegância ao Piano</h5>
@@ -184,7 +245,12 @@
           <!--VIDEO VIOLINO-IGREJA-->
           <div class="carousel-item">
             <a href="./violino-igreja/index.html">
-              <img class="carousel-image" src="./images/violino-igreja.png" class="d-block w-100" alt="...">
+              <img
+                class="carousel-image"
+                src="./images/violino-igreja.png"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
             <div class="carousel-caption">
               <h5>Melodias que Tocam a Alma</h5>
@@ -195,7 +261,12 @@
           <!--VIDEO VIOLINO-CASAMENTO-->
           <div class="carousel-item">
             <a href="./violino-casamento/index.html">
-              <img class="carousel-image" src="./images/violino-casamento.png" class="d-block w-100" alt="...">
+              <img
+                class="carousel-image"
+                src="./images/violino-casamento.png"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
             <div class="carousel-caption">
               <h5>Momentos Inesquecíveis</h5>
@@ -206,29 +277,41 @@
           <!--VIDEO VIOLINO-VIOLAO-->
           <div class="carousel-item">
             <a href="./violino-violao/index.html">
-              <img class="carousel-image" src="./images/violino-violao.png" class="d-block w-100" alt="...">
+              <img
+                class="carousel-image"
+                src="./images/violino-violao.png"
+                class="d-block w-100"
+                alt="..."
+              />
             </a>
             <div class="carousel-caption">
               <h5>Interpretação Instrumental</h5>
               <p>A união entre técnica, emoção e musicalidade.</p>
             </div>
           </div>
-
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
 
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
     </section>
-
-
 
     <footer>
       <div class="footer-conteudo">
@@ -258,15 +341,6 @@
             <span>WhatsApp: (11) 99294-4812</span>
             <i class="bi bi-whatsapp icone-whatsapp"></i>
             <!--ícone whatsapp do bootstrap-->
-          </a>
-        </div>
-
-        <div class="contato-email">
-          <a href="mailto:jbdrosi@gmail.com" class="link-email">
-            <span>Email: jbdrosi@gmail.com</span>
-            <i class="bi bi-envelope-at-fill icone-email"></i>
-
-            <!--ícone email do bootstrap-->
           </a>
         </div>
       </div>
