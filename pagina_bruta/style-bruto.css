@@ -294,63 +294,8 @@ p.textoexplicativo{
 }
 
 
-.cardinfo{
-  position: relative;
-
-  height: 400px;
-
-  border-radius: 20px;
-
-  overflow: hidden;
-}
-
-.foto{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s;
-}
-
-.cardinfo:hover .foto{
-  transform: scale(1.05);
-}
 
 
-.texto{
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  z-index: 2;
-}
-
-.texto h2{
-  font-family: "dark";
-  margin: 0;
-  font-size: 35px;
-}
-.textinho{
-  font-family: "star";
-}
-.texto p{
-  font-family: "star";
-  margin: 0;
-  font-size: 18px;
-}
-
-.cardinfo::after{
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 45%;
-
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-}
 
 @keyframes slide {
      0% { transform: translateX(0); }
@@ -550,4 +495,99 @@ footer {
 .icone-email {
   font-size: 3rem;
   color: rgb(155, 135, 21);
+}
+
+.cardinfo {
+  position: relative;
+  height: 400px;
+  perspective: 1000px; 
+  background-color: transparent;
+}
+
+.cardinfo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.cardinfo:hover .cardinfo-inner {
+  transform: rotateY(180deg);
+}
+
+.cardinfo-front, .cardinfo-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; 
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cardinfo-front .foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardinfo-front::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  pointer-events: none; 
+}
+
+.cardinfo-front .texto {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
+
+.cardinfo-front .texto h2 {
+  font-family: "dark";
+  margin: 0;
+  font-size: 35px;
+}
+
+.cardinfo-front .texto p {
+  font-family: "star";
+  margin: 0;
+  font-size: 18px;
+}
+
+.cardinfo-back {
+  background: #111111;
+  border: 2px solid gold;
+  transform: rotateY(180deg);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.cardinfo-back h2 {
+  font-family: "dark";
+  font-size: 35px;
+  color: gold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cardinfo-back p.textinho {
+  font-family: "star";
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
 }
