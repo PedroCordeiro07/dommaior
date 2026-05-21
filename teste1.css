@@ -23,50 +23,62 @@ body {
 }
 
 /* =========================================
-   DECORAÇÕES (NOTAS MUSICAIS)
+   IMAGEM GRANDE NO FUNDO
 ========================================= */
-.decoration img {
+
+.decoration {
   position: fixed;
-  width: 80px;
-  opacity: 0.25;
-  filter: brightness(0) invert(1);
+
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   pointer-events: none;
-  z-index: 1;
+
+  z-index: -1;
 }
 
-.canto-superior-esquerdo {
-  top: 10rem;
-  left: 2rem;
-}
+.imagem-fundo {
+  width: 600px;
 
-.canto-superior-direito {
-  top: 10rem;
-  right: 2rem;
-}
+  opacity: 0.06;
 
-.canto-inferior-esquerdo {
-  bottom: 7rem;
-  left: 2rem;
-}
+  filter: brightness(0) invert(1);
 
-.canto-inferior-direito {
-  bottom: 7rem;
-  right: 2rem;
+  transform: rotate(-15deg);
+  animation: flutuar 6s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
-  .decoration img {
-    width: 50px;
-    opacity: 0.2;
+  .imagem-fundo {
+    width: 350px;
+    opacity: 0.05;
   }
 }
+@keyframes flutuar {
+  0% {
+    transform: rotate(-15deg) translateY(0px) scale(1);
+  }
 
+  50% {
+    transform: rotate(-10deg) translateY(-20px) scale(1.03);
+  }
+
+  100% {
+    transform: rotate(-15deg) translateY(0px) scale(1);
+  }
+}
 /* =========================================
    LAYOUT GERAL E HERO
 ========================================= */
 main {
-  padding: 1rem;
-  flex: 1;
+   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .hero {
@@ -203,14 +215,35 @@ main {
   width: 85%;
   max-width: 900px;
   margin: 0 auto;
+  animation: flutuarCarousel 4s ease-in-out infinite;
 }
+
+@keyframes flutuarCarousel {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 
 .carousel-item img {
   width: 100%;
   height: 500px;
   object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-  border-radius: 1rem;
+
+  border: 3px solid gold;
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.3),
+    0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 .carousel-caption h5 {
@@ -251,11 +284,20 @@ h1 {
    FOOTER E CONTATOS
 ========================================= */
 footer {
+  width: 100%;
   margin-top: 3rem;
   padding: 1.5rem 1rem;
   background-color: #0f0f0f;
+
   border-top: 2px solid;
-  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+  border-image: linear-gradient(
+    to right,
+    #0f0f0f,
+    #a79326,
+    #0f0f0f
+  ) 1;
+
+  box-sizing: border-box;
 }
 
 .footer-conteudo {
@@ -316,5 +358,193 @@ footer {
 }
 
 .logo-contato {
+  padding: 2rem;
+}
+
+/*coisas do rodrigo*/
+
+@font-face{
+  font-family: "instrumentos";
+  src: url("fontes/WC_Musica_Bta.otf");
+}
+@font-face{
+  font-family: "bali";
+  src: url("fontes/Balinesty\ Demo.otf");
+}
+@font-face{
+  font-family: "dark";
+  src: url("fontes/Darkella\ Demo.otf");
+}
+@font-face{
+  font-family: "star";
+  src: url("fontes/Worldstar.ttf");
+}
+.dommaiorimagem{
+  width: 270px;
+  height: 100px;
+}
+.desenhoinstrumento{
+  font-family: "instrumentos";
+  font-size: 40px;
+  color: gold;
+}
+
+.container-cards-info2{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px;
+
+    padding: 40px;
+
+    border-top: 2px solid gold;
+    border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+}
+
+.aulas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid gold;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+  justify-self: center;
+  width: 100%;
+  margin: 15px;
+  padding-bottom: 30px;
+}
+
+
+.logoprincipal{
+  height: 280px;
+  width: 1000px;
+}
+.container-cards-info{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+    padding: 40px;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
+    border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+
+}
+.aulas2{
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 40px;
+
+  margin-top: 50px;
+}
+
+.card-aula{
+  text-align: center;
+}
+
+.card-aula img{
+  width: 250px;
+  height: 250px;
+
+  border-radius: 20px;
+}
+
+
+.cardinfo{
+  position: relative;
+
+  height: 400px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  border: 2px solid #d4b44c;
+
+  box-shadow:
+    0 0 10px rgba(212, 180, 76, 0.3),
+    0 6px 18px rgba(0, 0, 0, 0.6);
+
+  transition: 0.3s ease;
+}
+
+.foto{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.cardinfo:hover{
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 0 20px rgba(212, 180, 76, 0.6),
+    0 12px 28px rgba(0, 0, 0, 0.7);
+}
+
+
+.texto{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
+
+.texto h2{
+  font-family: "dark";
+  margin: 0;
+  font-size: 35px;
+}
+.textinho{
+  font-family: "star";
+}
+.texto p{
+  font-family: "star";
+  margin: 0;
+  font-size: 18px;
+}
+
+.cardinfo::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 45%;
+
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+@keyframes slide {
+     0% { transform: translateX(0); }
+     15% { transform: translateX(0); }
+
+     20% { transform: translateX(-20%); }
+     35% { transform: translateX(-20%); }
+
+     40% { transform: translateX(-40%); }
+     55% { transform: translateX(-40%); }
+
+     60% { transform: translateX(-60%); }
+     75% { transform: translateX(-60%); }
+
+     80% { transform: translateX(-80%); }
+     95% { transform: translateX(-80%); }
+
+     100% { transform: translateX(0); }
+}
+.container-contato{
+  width: 100%;
+  max-width: 600px;
   padding: 2rem;
 }
