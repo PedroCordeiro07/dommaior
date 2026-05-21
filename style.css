@@ -457,12 +457,12 @@ footer {
 
 .cardinfo{
   position: relative;
-
+  width: 320px;
   height: 400px;
 
   border-radius: 20px;
 
-  overflow: hidden;
+  
 
   border: 2px solid #d4b44c;
 
@@ -471,6 +471,7 @@ footer {
     0 6px 18px rgba(0, 0, 0, 0.6);
 
   transition: 0.3s ease;
+  perspective: 1000px;
 }
 
 .foto{
@@ -501,6 +502,7 @@ footer {
   font-family: "dark";
   margin: 0;
   font-size: 35px;
+  color: black;
 }
 .textinho{
   font-family: "star";
@@ -509,6 +511,7 @@ footer {
   font-family: "star";
   margin: 0;
   font-size: 18px;
+  color: black;
 }
 
 .cardinfo::after{
@@ -518,7 +521,7 @@ footer {
 
     left: 0;
     bottom: 0;
-
+    border-radius: 20px;
     width: 100%;
     height: 45%;
 
@@ -547,4 +550,62 @@ footer {
   width: 100%;
   max-width: 600px;
   padding: 2rem;
+}
+
+.card__inner{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+ 
+}
+
+.card__inner.is-flipped{
+  transform: rotateY(180deg);
+}
+
+.card__face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 20px;
+}
+.card__face--front{
+
+  background: black;
+  z-index: 2;
+}
+.card__face--front> img{
+   border-radius: 20px;
+}
+
+
+.card__face--back{
+
+
+  transform: rotateY(180deg);
+  background: black;
+  z-index: 1;
+}
+
+
+.card__content{
+  color: white;
+}
+
+.card__body h2{
+  font-family: "dark";
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.card__body p{
+  font-family: "star";
+  line-height: 1.6;
+  font-size: 17px;
+  color: #dcdcdc;
 }
