@@ -162,11 +162,6 @@ main {
 
 /* Centraliza a logo de forma absoluta no meio exato */
 #second-navbar .navbar-brand {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
   z-index: 10;
 }
 
@@ -195,16 +190,31 @@ main {
 }
 
 /* Ajustes da Navbar e Logo para Celular */
+/* Garante que o menu não fique por cima da logo */
+#second-navbar .navbar-collapse {
+  z-index: 5;
+  background: transparent;
+}
+
+/* Mantém a logo acima do menu */
+#second-navbar .navbar-brand {
+  z-index: 10;
+}
+
+/* MOBILE: remove posicionamento absoluto da logo */
+@media (min-width: 769px) {
+  #second-navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 @media (max-width: 768px) {
-  #second-navbar {
-    min-height: 90px;
-  }
-  .logo {
-    width: 180px;
-  }
-  .navbar-nav {
-    display: flex;
-    align-items: center;
+  #second-navbar .navbar-brand {
+    position: static;
+    transform: none;
   }
 }
 
@@ -460,31 +470,8 @@ footer {
 }
 
 
-.cardinfo{
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  width: 100%;
-  max-width: 320px;
-
-  height: 400px;
-
-  perspective: 1000px;
-  
-}
-
-.foto{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s;
-}
-
-.cardinfo:hover{
-  transform: translateY(-8px);
 
 
-}
 
 
 .texto{
@@ -492,6 +479,7 @@ footer {
   bottom: 20px;
   left: 20px;
   color: white;
+ 
   z-index: 2;
 }
 
@@ -506,24 +494,13 @@ footer {
 }
 .texto p{
   font-family: "star";
-  margin: 0;
+  margin: 0 auto;
   font-size: 18px;
   color: white;
+  
 }
 
-.cardinfo::after{
-    content: "";
 
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-    border-radius: 20px;
-    width: 100%;
-    height: 45%;
-
-    
-}
 
 @keyframes slide {
      0% { transform: translateX(0); }
@@ -549,103 +526,8 @@ footer {
   padding: 2rem;
 }
 
-.card__inner{
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
-  
-  border-radius: 20px;
-
-  
-
-  border: 2px solid #d4b44c;
-
-  box-shadow:
-    0 0 10px rgba(212, 180, 76, 0.3),
-    0 6px 18px rgba(0, 0, 0, 0.6);
- 
-}
-
-.card__inner.is-flipped{
-  transform: rotateY(180deg);
-}
-
-.card__face{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: 20px;
-}
-.card__face::after{
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-    border-radius: 20px;
-    width: 100%;
-    height: 45%;
-
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-}
-.card__face--front{
-
-  background: black;
-  z-index: 2;
-}
-.card__face--front> img{
-   border-radius: 20px;
-}
 
 
-.card__face--back{
-
-
-  transform: rotateY(180deg);
-  background: black;
-  z-index: 1;
-}
-
-
-.card__content{
-  color: white;
-}
-.card__body{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-.card__body h2{
-  font-family: "dark";
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.card__body p{
-  font-family: "star";
-  line-height: 1.6;
-  font-size: 17px;
-  color: #dcdcdc;
-  text-justify: center;
-}
-.card__body button{
-  width: 150px;
-  height: 1%;
-  margin: 30px auto;
-  background-color: black;
-  color: gold;
-  border: 2px solid gold;
-  border-radius: 20px;
-  padding: 10px;
-  cursor: pointer;
-}
 @media (max-width: 1000px){
   .container-cards-info{
     grid-template-columns: repeat(2, 1fr);
@@ -656,4 +538,127 @@ footer {
   .container-cards-info{
     grid-template-columns: 1fr;
   }
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  perspective: 1000px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  background: none;
+  height: 400px;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  
+  border-radius: 20px;
+  border: 2px solid #d4b44c;
+  box-shadow:
+    0 0 10px rgba(212, 180, 76, 0.3),
+    0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  inset: 0;
+  
+  
+}
+.card-front::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  border-radius: 20px;
+  
+}
+.card-front {
+  background-image: url("imagensteste/violao.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+
+
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: black;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  
+}
+.card-back h2{
+  font-family: "dark";
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.card-back p{
+  font-family: "star";
+  line-height: 1.6;
+  font-size: 17px;
+  color: #dcdcdc;
+  text-justify: center;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.btn {
+  position: relative;
+  z-index: 3;
+  width: 150px;
+  height: 10%;
+  
+  background-color: black;
+  color: gold;
+  border: 2px solid gold;
+  border-radius: 20px;
+  
+ 
+}
+.btn:hover{
+ 
+  border: 2px solid gold;
 }
