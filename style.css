@@ -662,3 +662,9 @@ footer {
  
   border: 2px solid gold;
 }
+
+.button-contato {
+  color: inherit;
+  font-size: 15px;
+  text-decoration: none;
+}
