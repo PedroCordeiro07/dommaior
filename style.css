@@ -1,3 +1,4 @@
+/* BASE */
 html,
 body {
   margin: 0;
@@ -6,7 +7,6 @@ body {
 }
 
 body {
-  background-color: #2d2d2d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,59 +22,150 @@ body {
   );
 }
 
-/* =========================================
-   IMAGEM GRANDE NO FUNDO
-========================================= */
+/* FONTES */
+@font-face {
+  font-family: "instrumentos";
+  src: url("fontes/WC_Musica_Bta.otf");
+}
+@font-face {
+  font-family: "bali";
+  src: url("fontes/Balinesty Demo.otf");
+}
+@font-face {
+  font-family: "dark";
+  src: url("fontes/Darkella Demo.otf");
+}
+@font-face {
+  font-family: "star";
+  src: url("fontes/Worldstar.ttf");
+}
 
+/* NAVBAR */
+.navbar {
+  min-width: 100%;
+}
+
+#second-navbar {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #020202a6 0%,
+    #0b0b0b 45%,
+    #05050567 100%
+  );
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+}
+
+#second-navbar .container-fluid {
+  position: relative;
+}
+
+#second-navbar .nav-link,
+#second-navbar .navbar-brand {
+  color: white;
+}
+
+#second-navbar .nav-link:hover,
+#second-navbar .navbar-brand:hover {
+  color: #d4b44c;
+}
+
+#second-navbar .navbar-collapse {
+  z-index: 5;
+  background: transparent;
+}
+
+#second-navbar .navbar-brand {
+  z-index: 10;
+}
+
+@media (min-width: 769px) {
+  #second-navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  #second-navbar .navbar-brand {
+    position: static;
+    transform: none;
+  }
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+}
+
+.navbar-nav {
+  gap: 20px;
+  margin-right: 10%;
+  align-items: center;
+}
+
+.nav-button {
+  border: 1px solid #d4b44c;
+  border-radius: 10px;
+  padding: 8px 18px !important;
+  margin-left: 12px;
+  width: fit-content;
+  transition: 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+/* FUNDO DECORATIVO */
 .decoration {
   position: fixed;
-
   inset: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   pointer-events: none;
-
   z-index: -1;
 }
 
 .imagem-fundo {
   width: 600px;
-
   opacity: 0.06;
-
   filter: brightness(0) invert(1);
-
   transform: rotate(-15deg);
   animation: flutuar 6s ease-in-out infinite;
 }
 
-@media (max-width: 768px) {
-  .imagem-fundo {
-    width: 350px;
-    opacity: 0.05;
-  }
-}
 @keyframes flutuar {
   0% {
     transform: rotate(-15deg) translateY(0px) scale(1);
   }
-
   50% {
     transform: rotate(-10deg) translateY(-20px) scale(1.03);
   }
-
   100% {
     transform: rotate(-15deg) translateY(0px) scale(1);
   }
 }
-/* =========================================
-   LAYOUT GERAL E HERO
-========================================= */
+
+/* MAIN E HERO */
 main {
-   flex: 1;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,119 +199,7 @@ main {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-  }
-  .hero-picture {
-    width: 50%;
-  }
-  .hero-description {
-    width: 75%;
-  }
-}
-
-/* =========================================
-   NAVBAR E LOGO
-========================================= */
-.navbar {
-  min-width: 100%;
-}
-
-#second-navbar {
-  background: linear-gradient(
-    135deg,
-    #020202a6 0%,
-    #0b0b0b 45%,
-    #05050567 100%
-  );
-  border-width: 0 0 2px 0;
-  border-style: solid;
-  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
-
-  /* Altura e alinhamento da barra */
-  min-height: 120px;
-  display: flex;
-  align-items: center;
-}
-
-/* Permite usar o posicionamento absoluto dentro da navbar fluid */
-#second-navbar .container-fluid {
-  position: relative;
-}
-
-#second-navbar .nav-link,
-#second-navbar .navbar-brand {
-  color: white;
-}
-
-#second-navbar .nav-link:hover,
-#second-navbar .navbar-brand:hover {
-  color: #d4b44c;
-}
-
-/* Centraliza a logo de forma absoluta no meio exato */
-#second-navbar .navbar-brand {
-  z-index: 10;
-}
-
-/* Tamanho fixo da logo */
-.logo {
-  width: 220px;
-  height: auto;
-}
-
-.nav-button {
-  border: 1px solid #d4b44c;
-  border-radius: 10px;
-  padding: 8px 18px !important;
-  margin-left: 12px;
-  transition: 0.3s ease;
-}
-
-.nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
-}
-
-.navbar-nav {
-  gap: 20px;
-  margin-right: 10%;
-}
-
-/* Ajustes da Navbar e Logo para Celular */
-/* Garante que o menu não fique por cima da logo */
-#second-navbar .navbar-collapse {
-  z-index: 5;
-  background: transparent;
-}
-
-/* Mantém a logo acima do menu */
-#second-navbar .navbar-brand {
-  z-index: 10;
-}
-
-/* MOBILE: remove posicionamento absoluto da logo */
-@media (min-width: 769px) {
-  #second-navbar .navbar-brand {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@media (max-width: 768px) {
-  #second-navbar .navbar-brand {
-    position: static;
-    transform: none;
-  }
-}
-
-/* =========================================
-   CARROSSEL
-========================================= */
+/* CARROSSEL */
 .carousel-container {
   width: 85%;
   max-width: 900px;
@@ -232,25 +211,20 @@ main {
   0% {
     transform: translateY(0px);
   }
-
   50% {
     transform: translateY(-12px);
   }
-
   100% {
     transform: translateY(0px);
   }
 }
 
-
 .carousel-item img {
   width: 100%;
   height: 500px;
   object-fit: cover;
-
   border: 3px solid gold;
   border-radius: 20px;
-
   box-shadow:
     0 0 10px rgba(255, 215, 0, 0.3),
     0 6px 18px rgba(0, 0, 0, 0.6);
@@ -260,25 +234,13 @@ main {
   font-family: "Playfair Display", serif;
 }
 
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 320px;
-  }
-  .carousel-caption h5 {
-    font-size: 1rem;
-  }
-  .carousel-caption p {
-    font-size: 0.78rem;
-  }
-}
-
 h1 {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 2rem;
   letter-spacing: 0.5px;
-  margin-bottom: 5px;
   margin-top: 3rem;
+  margin-bottom: 5px;
 }
 
 .carousel-subtitle {
@@ -290,24 +252,254 @@ h1 {
   color: yellow;
 }
 
-/* =========================================
-   FOOTER E CONTATOS
-========================================= */
+/* CARDS COM FLIP */
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  perspective: 1000px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  background: none;
+  height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  border-radius: 20px;
+  border: 2px solid #d4b44c;
+  box-shadow:
+    0 0 10px rgba(212, 180, 76, 0.3),
+    0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.card-front {
+  background-image: url("imagensteste/violao.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.card-front::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  border-radius: 20px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: black;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.card-back h2 {
+  font-family: "dark";
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.card-back p {
+  font-family: "star";
+  line-height: 1.6;
+  font-size: 17px;
+  color: #dcdcdc;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.btn {
+  position: relative;
+  z-index: 3;
+  width: 150px;
+  height: 10%;
+  background-color: black;
+  color: gold;
+  border: 2px solid gold;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  border: 2px solid gold;
+}
+.button-contato {
+  color: inherit;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* SEÇÕES DE AULAS E CARDS */
+.desenhoinstrumento {
+  font-family: "instrumentos";
+  font-size: 40px;
+  color: gold;
+}
+.dommaiorimagem {
+  width: 270px;
+  height: 100px;
+}
+.logoprincipal {
+  height: 280px;
+  width: 1000px;
+}
+
+.texto {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
+.texto h2 {
+  font-family: "dark";
+  margin: 0;
+  font-size: 35px;
+  color: white;
+}
+.texto p {
+  font-family: "star";
+  margin: 0 auto;
+  font-size: 18px;
+  color: white;
+}
+.textinho {
+  font-family: "star";
+}
+
+.aulas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
+  margin: 15px;
+  padding-bottom: 30px;
+  border-top: 2px solid gold;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+}
+
+.aulas2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.card-aula {
+  text-align: center;
+}
+.card-aula img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.container-cards-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+}
+
+.container-cards-info2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 40px;
+  border-top: 2px solid gold;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+}
+
+.container-contato {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+@keyframes slide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  15% {
+    transform: translateX(-20%);
+  }
+  40%,
+  35% {
+    transform: translateX(-40%);
+  }
+  60%,
+  55% {
+    transform: translateX(-60%);
+  }
+  80%,
+  75% {
+    transform: translateX(-80%);
+  }
+}
+
+/* FOOTER */
 footer {
   width: 100%;
   margin-top: 3rem;
   padding: 1.5rem 1rem;
-  background-color: #0f0f0f;
-
-  border-top: 2px solid;
-  border-image: linear-gradient(
-    to right,
-    #0f0f0f,
-    #a79326,
-    #0f0f0f
-  ) 1;
-
   box-sizing: border-box;
+  background-color: #0f0f0f;
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
 }
 
 .footer-conteudo {
@@ -316,19 +508,6 @@ footer {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-}
-
-.contato-instagram,
-.contato-whatsapp,
-.contato-email {
-  display: flex;
-  align-items: center;
-}
-
-.contato-instagram span,
-.contato-whatsapp span,
-.contato-email span {
-  color: white;
 }
 
 .link-instagram,
@@ -361,310 +540,48 @@ footer {
   font-size: 3rem;
   color: #25d366;
 }
-
 .icone-email {
   font-size: 3rem;
   color: #ffffff;
 }
-
 .logo-contato {
   padding: 2rem;
 }
 
-/*coisas do rodrigo*/
-
-@font-face{
-  font-family: "instrumentos";
-  src: url("fontes/WC_Musica_Bta.otf");
-}
-@font-face{
-  font-family: "bali";
-  src: url("fontes/Balinesty\ Demo.otf");
-}
-@font-face{
-  font-family: "dark";
-  src: url("fontes/Darkella\ Demo.otf");
-}
-@font-face{
-  font-family: "star";
-  src: url("fontes/Worldstar.ttf");
-}
-.dommaiorimagem{
-  width: 270px;
-  height: 100px;
-}
-.desenhoinstrumento{
-  font-family: "instrumentos";
-  font-size: 40px;
-  color: gold;
-}
-
-.container-cards-info2{
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 50px;
-
-    padding: 40px;
-
-    border-top: 2px solid gold;
-    border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
-}
-
-.aulas{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 2px solid gold;
-  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
-  justify-self: center;
-  width: 100%;
-  margin: 15px;
-  padding-bottom: 30px;
-}
-
-
-.logoprincipal{
-  height: 280px;
-  width: 1000px;
-}
-.container-cards-info{
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 30px;
-
-  padding: 40px;
-
-  width: 100%;
-  box-sizing: border-box;
-
-  border-top: 2px solid gold;
-  border-bottom: 2px solid gold;
-  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
-
-  justify-items: center;
-}
-.aulas2{
-  display: flex;
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 40px;
-
-  margin-top: 50px;
-}
-
-.card-aula{
-  text-align: center;
-}
-
-.card-aula img{
-  width: 250px;
-  height: 250px;
-
-  border-radius: 20px;
-}
-
-
-
-
-
-
-.texto{
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
- 
-  z-index: 2;
-}
-
-.texto h2{
-  font-family: "dark";
-  margin: 0;
-  font-size: 35px;
-  color: white;
-}
-.textinho{
-  font-family: "star";
-}
-.texto p{
-  font-family: "star";
-  margin: 0 auto;
-  font-size: 18px;
-  color: white;
-  
-}
-
-
-
-@keyframes slide {
-     0% { transform: translateX(0); }
-     15% { transform: translateX(0); }
-
-     20% { transform: translateX(-20%); }
-     35% { transform: translateX(-20%); }
-
-     40% { transform: translateX(-40%); }
-     55% { transform: translateX(-40%); }
-
-     60% { transform: translateX(-60%); }
-     75% { transform: translateX(-60%); }
-
-     80% { transform: translateX(-80%); }
-     95% { transform: translateX(-80%); }
-
-     100% { transform: translateX(0); }
-}
-.container-contato{
-  width: 100%;
-  max-width: 600px;
-  padding: 2rem;
-}
-
-
-
-@media (max-width: 1000px){
-  .container-cards-info{
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+  .container-cards-info {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 650px){
-  .container-cards-info{
+@media (max-width: 768px) {
+  .imagem-fundo {
+    width: 350px;
+    opacity: 0.05;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero-picture {
+    width: 50%;
+  }
+  .hero-description {
+    width: 75%;
+  }
+  .carousel-item img {
+    height: 320px;
+  }
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+  .carousel-caption p {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .container-cards-info {
     grid-template-columns: 1fr;
   }
-}
-
-.container {
-  display: flex;
-  gap: 20px;
-}
-
-.card {
-  transition: transform 0.3s ease;
-  perspective: 1000px;
-  cursor: pointer;
-  width: 100%;
-  max-width: 320px;
-  background: none;
-  height: 400px;
-}
-.card:hover {
-  transform: translateY(-8px);
-}
-.card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-  
-  border-radius: 20px;
-  border: 2px solid #d4b44c;
-  box-shadow:
-    0 0 10px rgba(212, 180, 76, 0.3),
-    0 6px 18px rgba(0, 0, 0, 0.6);
-}
-
-.card.is-flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  inset: 0;
-  
-  
-}
-.card-front::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 45%;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-  border-radius: 20px;
-  
-}
-.card-front {
-  background-image: url("imagensteste/violao.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 2;
-
-
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  background: black;
-  color: white;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-
-  
-}
-.card-back h2{
-  font-family: "dark";
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.card-back p{
-  font-family: "star";
-  line-height: 1.6;
-  font-size: 17px;
-  color: #dcdcdc;
-  text-justify: center;
-}
-
-.bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 20px;
-}
-
-.btn {
-  position: relative;
-  z-index: 3;
-  width: 150px;
-  height: 10%;
-  
-  background-color: black;
-  color: gold;
-  border: 2px solid gold;
-  border-radius: 20px;
-  
- 
-}
-.btn:hover{
- 
-  border: 2px solid gold;
-}
-
-.button-contato {
-  color: inherit;
-  font-size: 15px;
-  text-decoration: none;
 }

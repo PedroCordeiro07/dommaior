@@ -1,3 +1,4 @@
+/* BASE */
 html,
 body {
   margin: 0;
@@ -6,15 +7,11 @@ body {
 }
 
 body {
-  background-color: #2d2d2d;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-
   background: linear-gradient(
     135deg,
     #050505 0%,
@@ -24,81 +21,15 @@ body {
   );
 }
 
-/* LOGO */
-
-.logo {
-  width: 20%;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    width: 40%;
-  }
-}
-
-/* MAIN */
-
-main {
-  flex: 1;
-}
-
-/* TITULOS */
-
-h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  font-size: 2.3rem;
-
-  letter-spacing: 0.5px;
-
-  margin-top: 5rem;
-  margin-bottom: 5px;
-}
-
-.about-subtitle {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-
-  opacity: 0.7;
-
-  letter-spacing: 0.5px;
-
-  color: #c7b02d;
-
-  margin-bottom: 5rem;
-
-  padding-bottom: 1rem;
-
-  border-bottom: 2px solid gold;
-
-  border-image: linear-gradient(
-      to right,
-      #0f0f0f,
-      #a79326,
-      #0f0f0f
-    )
-    1;
-}
-
-h3 {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  font-size: 2rem;
-
-  letter-spacing: 0.5px;
-
-  margin-bottom: 10px;
-
-  color: #c7b02d;
-}
-/* =========================================
-   NAVBAR E LOGO
-========================================= */
+/* NAVBAR */
 .navbar {
   min-width: 100%;
 }
 
 #second-navbar {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
   background: linear-gradient(
     135deg,
     #020202a6 0%,
@@ -106,16 +37,10 @@ h3 {
     #05050567 100%
   );
   border-width: 0 0 2px 0;
- 
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
-
-  /* Altura e alinhamento da barra */
-  min-height: 120px;
-  display: flex;
-  align-items: center;
 }
 
-/* Permite usar o posicionamento absoluto dentro da navbar fluid */
 #second-navbar .container-fluid {
   position: relative;
 }
@@ -130,27 +55,30 @@ h3 {
   color: #d4b44c;
 }
 
-/* Centraliza a logo de forma absoluta no meio exato */
 #second-navbar .navbar-brand {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  margin: 0;
   z-index: 10;
 }
 
-/* Tamanho fixo da logo */
 .logo {
   width: 220px;
   height: auto;
+}
+
+.navbar-nav {
+  gap: 20px;
+  margin-right: 10%;
+  align-items: center;
 }
 
 .nav-button {
   border: 1px solid #d4b44c;
   border-radius: 10px;
   padding: 8px 18px !important;
-  margin-left: 12px;
+  width: fit-content;
   transition: 0.3s ease;
 }
 
@@ -159,194 +87,117 @@ h3 {
   transform: translateY(-2px);
 }
 
-.navbar-nav {
-  gap: 20px;
-  margin-right: 10%;
+/* TÍTULOS */
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2.3rem;
+  letter-spacing: 0.5px;
+  margin-top: 5rem;
+  margin-bottom: 5px;
 }
 
-/* Ajustes da Navbar e Logo para Celular */
-@media (max-width: 768px) {
-  #second-navbar {
-    min-height: 90px;
-  }
-  .logo {
-    width: 180px;
-  }
-  .navbar-nav {
-    display: flex;
-    align-items: center;
-  }
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  color: #c7b02d;
+}
+
+.about-subtitle {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  color: #c7b02d;
+  margin-bottom: 5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid gold;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
+}
+
+/* MAIN */
+main {
+  flex: 1;
 }
 
 /* BLOCOS */
-
 .block,
 .block.reverse {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   width: 100%;
-
   padding: 4rem 6%;
-
   gap: 70px;
-
   box-sizing: border-box;
 }
 
 .block.reverse {
   flex-direction: row-reverse;
-
   background-color: #0f0f0f;
-
   border-top: 2px solid gold;
   border-bottom: 2px solid gold;
-
-  border-image: linear-gradient(
-      to right,
-      #0f0f0f,
-      #a79326,
-      #0f0f0f
-    )
-    1;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
 }
-
-/* IGUALAR ESPAÇAMENTO */
 
 .block > div,
 .block.reverse > div {
   flex: 1;
 }
 
-/* TEXTO */
-
 .about-text-block,
 .about-text-blockReverse {
   width: 25%;
-
   text-align: left;
-
   font-family: "Poppins", serif;
-
-  line-height: 1.8;
-
   font-size: 1rem;
-
+  line-height: 1.8;
   padding: 0;
   margin: 0;
 }
 
-/* IMAGENS */
-
 .about-image-block,
 .about-image-blockReverse {
   width: 100%;
-
   max-width: 750px;
-
   border-radius: 20px;
-
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-
   display: block;
-
   object-fit: cover;
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .block,
-  .block.reverse {
-    flex-direction: column;
-
-    padding: 3rem 1.5rem;
-
-    gap: 30px;
-  }
-
-  .about-text-block,
-  .about-text-blockReverse {
-    width: 90%;
-
-    text-align: left;
-  }
-
-  .about-image-block,
-  .about-image-blockReverse {
-    width: 90%;
-
-    max-width: 450px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-size: 1.7rem;
-  }
-}
-
 /* FOOTER */
-
 footer {
-  margin-top: 4rem;
-
+  width: 100%;
   padding: 1.5rem 1rem;
-
+  box-sizing: border-box;
   background-color: #0f0f0f;
-
-  border-top: 2px solid gold;
-
-  border-image: linear-gradient(
-      to right,
-      #0f0f0f,
-      #a79326,
-      #0f0f0f
-    )
-    1;
+  border-image: linear-gradient(to right, #0f0f0f, #a79326, #0f0f0f) 1;
 }
 
 .footer-conteudo {
   display: flex;
-
   justify-content: center;
   align-items: center;
-
   gap: 2rem;
-
   flex-wrap: wrap;
-}
-
-.contato-instagram,
-.contato-whatsapp,
-.contato-email {
-  display: flex;
-  align-items: center;
 }
 
 .link-instagram,
 .link-whatsapp,
 .link-email {
   display: flex;
-
   align-items: center;
-
   gap: 0.5rem;
-
   text-decoration: none;
-
   color: white;
 }
 
-/* ICONES */
-
 .icone-instagram {
   font-size: 3rem;
-
   background: linear-gradient(
     45deg,
     #f09433,
@@ -355,21 +206,56 @@ footer {
     #cc2366,
     #bc1888
   );
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   display: inline-block;
 }
 
 .icone-whatsapp {
   font-size: 3rem;
-
   color: #25d366;
 }
-
 .icone-email {
   font-size: 3rem;
-
   color: #ffffff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #second-navbar .navbar-brand {
+    position: static;
+    transform: none;
+  }
+
+  .block,
+  .block.reverse {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 30px;
+  }
+
+  .about-text-block,
+  .about-text-blockReverse {
+    width: 90%;
+  }
+
+  .about-image-block,
+  .about-image-blockReverse {
+    width: 90%;
+    max-width: 450px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
 }
