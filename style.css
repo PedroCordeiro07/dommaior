@@ -207,6 +207,8 @@ main {
   animation: flutuarCarousel 4s ease-in-out infinite;
 }
 
+
+
 @keyframes flutuarCarousel {
   0% {
     transform: translateY(0px);
@@ -585,3 +587,4 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
