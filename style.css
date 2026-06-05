@@ -220,11 +220,12 @@ main {
   bottom: 0;
   left: 0.5%;
   width: 99%;
-  height: 50%;
+  height: 30%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
+  padding-top: 1rem;
   color: white;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -237,6 +238,7 @@ main {
     rgba(0, 0, 0, 0) 100%
   );
 }
+
 
 .carousel-item:hover .hidden-text {
   opacity: 1;
@@ -608,10 +610,10 @@ footer {
     height: 320px;
   }
   .carousel-caption h5 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .carousel-caption p {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -623,14 +625,14 @@ footer {
 
 @media (max-width: 768px) {
   .hidden-text {
-    font-size: 0.78rem;
-    height: 80%;
-    background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(10, 10, 10, 0.9) 35%,
-    rgba(25, 25, 25, 0.7) 70%,
-    rgba(50, 50, 50, 0.25) 100%,
+    font-size: 0.75rem;
+    height: 45%;
+    background: linear-gradient( 
+      to top, rgba(0, 0, 0, 0.95) 0%, 
+      rgba(10, 10, 10, 0.9) 35%,
+      rgba(25, 25, 25, 0.7) 60%, 
+      rgba(50, 50, 50, 0.25) 85%, 
+      rgba(0, 0, 0, 0) 100% 
     );
   }
 }
