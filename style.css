@@ -207,7 +207,40 @@ main {
   animation: flutuarCarousel 4s ease-in-out infinite;
 }
 
+.carousel-item {
+  position: relative;
+}
 
+.hidden-text {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0.5%;
+  width: 99%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.97) 0%,
+    rgba(8, 8, 8, 0.84) 35%,
+    rgba(22, 22, 22, 0.6) 62%,
+    rgba(45, 45, 45, 0.18) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.carousel-item:hover .hidden-text {
+  opacity: 1;
+}
 
 @keyframes flutuarCarousel {
   0% {
@@ -585,6 +618,20 @@ footer {
 @media (max-width: 650px) {
   .container-cards-info {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-text {
+    font-size: 0.78rem;
+    height: 80%;
+    background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(10, 10, 10, 0.9) 35%,
+    rgba(25, 25, 25, 0.7) 70%,
+    rgba(50, 50, 50, 0.25) 100%,
+    );
   }
 }
 
